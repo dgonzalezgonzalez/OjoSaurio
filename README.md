@@ -62,6 +62,11 @@ Desactivar:
 powershell -ExecutionPolicy Bypass -File .\scripts\uninstall_autostart_windows.ps1
 ```
 
+### Windows sin terminal (doble clic)
+
+- Instalar autoarranque: doble clic en `InstalarAutoarranqueWindows.bat`
+- Desinstalar autoarranque: doble clic en `DesinstalarAutoarranqueWindows.bat`
+
 ## Controles
 
 - `Start`: inicia ciclo 20 minutos.
