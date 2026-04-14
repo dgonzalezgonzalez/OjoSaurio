@@ -18,7 +18,7 @@ class TwentyTwentyApp:
         self.root.geometry("280x180")
         self.root.resizable(False, False)
 
-        self.settings = Settings.from_env()
+        self.settings = Settings()
         self.engine = TimerEngine(settings=self.settings)
 
         root_dir = Path(__file__).resolve().parents[2]

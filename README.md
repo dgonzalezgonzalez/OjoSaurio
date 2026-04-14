@@ -30,15 +30,37 @@ O:
 
 - `OjoSaurio.bat`: doble clic, crea `.venv` si falta, instala app, abre temporizador.
 - `OjoSaurio.vbs`: doble clic sin ventana de consola (lanza `OjoSaurio.bat` oculto).
-- `OjoSaurioToy.bat`: modo toy Windows (`30s` + `20s`) para prueba rápida de pitidos.
-- `OjoSaurioToy.vbs`: igual que toy, sin consola visible.
 - En Windows, pitido usa `winsound.PlaySound` desde memoria (no depende del `wav` en disco).
 
-## Toy test (macOS)
+## Doble clic (macOS)
 
-- `OjoSaurioToy.command`: doble clic para pruebas rápidas de audio.
-- Modo toy usa `30s` de foco + `20s` de pausa visual.
-- App normal (`OjoSaurio.command`) sigue usando `20m` + `20s`.
+- `OjoSaurio.command`: doble clic para abrir app normal (`20m` + `20s`).
+
+## Autoarranque al encender ordenador
+
+### macOS
+
+```bash
+./scripts/install_autostart_mac.sh
+```
+
+Desactivar:
+
+```bash
+./scripts/uninstall_autostart_mac.sh
+```
+
+### Windows (PowerShell)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install_autostart_windows.ps1
+```
+
+Desactivar:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\uninstall_autostart_windows.ps1
+```
 
 ## Controles
 
