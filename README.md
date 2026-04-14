@@ -32,7 +32,7 @@ O:
 - `OjoSaurio.vbs`: doble clic sin ventana de consola (lanza `OjoSaurio.bat` oculto).
 - `OjoSaurioToy.bat`: modo toy Windows (`30s` + `20s`) para prueba rápida de pitidos.
 - `OjoSaurioToy.vbs`: igual que toy, sin consola visible.
-- En Windows, pitido usa `winsound.Beep` nativo (no depende del `wav`).
+- En Windows, pitido usa `winsound.PlaySound` desde memoria (no depende del `wav` en disco).
 
 ## Toy test (macOS)
 
