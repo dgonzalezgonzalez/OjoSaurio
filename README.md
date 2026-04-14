@@ -31,6 +31,12 @@ O:
 - `OjoSaurio.bat`: doble clic, crea `.venv` si falta, instala app, abre temporizador.
 - `OjoSaurio.vbs`: doble clic sin ventana de consola (lanza `OjoSaurio.bat` oculto).
 
+## Toy test (macOS)
+
+- `OjoSaurioToy.command`: doble clic para pruebas rápidas de audio.
+- Modo toy usa `30s` de foco + `20s` de pausa visual.
+- App normal (`OjoSaurio.command`) sigue usando `20m` + `20s`.
+
 ## Controles
 
 - `Start`: inicia ciclo 20 minutos.

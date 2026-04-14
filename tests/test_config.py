@@ -17,3 +17,11 @@ def test_invalid_focus_rejected() -> None:
 def test_invalid_break_rejected() -> None:
     with pytest.raises(ValueError, match="break_seconds"):
         Settings(break_seconds=-1)
+
+
+def test_from_env_overrides(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("TWENTY20_FOCUS_SECONDS", "30")
+    monkeypatch.setenv("TWENTY20_BREAK_SECONDS", "20")
+    cfg = Settings.from_env()
+    assert cfg.focus_seconds == 30
+    assert cfg.break_seconds == 20
