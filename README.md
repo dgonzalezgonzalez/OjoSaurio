@@ -50,6 +50,11 @@ Desactivar:
 ./scripts/uninstall_autostart_mac.sh
 ```
 
+### macOS sin terminal (doble clic)
+
+- Instalar autoarranque: doble clic en `InstalarAutoarranqueMac.command`
+- Desinstalar autoarranque: doble clic en `DesinstalarAutoarranqueMac.command`
+
 ### Windows (PowerShell)
 
 ```powershell
