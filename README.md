@@ -26,6 +26,11 @@ O:
 ./scripts/run_local.sh
 ```
 
+## Doble clic (Windows)
+
+- `OjoSaurio.bat`: doble clic, crea `.venv` si falta, instala app, abre temporizador.
+- `OjoSaurio.vbs`: doble clic sin ventana de consola (lanza `OjoSaurio.bat` oculto).
+
 ## Controles
 
 - `Start`: inicia ciclo 20 minutos.
