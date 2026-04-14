@@ -2,6 +2,8 @@
 
 Tu compi jurásico de productividad visual: trabaja 20 minutos, escucha un pitido sutil, mira lejos 20 segundos, vuelve al ataque. Repite mientras la app esté activa.
 
+![Logo OjoSaurio](assets/logo/ojosaurio-logo.png)
+
 ## Qué hace ⏱️
 
 - Cada `20m` -> `beep 1`
@@ -43,43 +45,11 @@ O:
 ## Doble clic (macOS) 🍎
 
 - `OjoSaurio.command`: doble clic para abrir app normal (`20m` + `20s`).
+- El temporizador arranca automáticamente al abrir la app (también en Windows).
 
-## Autoarranque al encender ordenador 🚀
+## Autoarranque (manual recomendado) 🚀
 
-### macOS
-
-```bash
-./scripts/install_autostart_mac.sh
-```
-
-Desactivar:
-
-```bash
-./scripts/uninstall_autostart_mac.sh
-```
-
-### macOS sin terminal (doble clic)
-
-- Instalar autoarranque: doble clic en `InstalarAutoarranqueMac.command`
-- Desinstalar autoarranque: doble clic en `DesinstalarAutoarranqueMac.command`
-- Si ya lo tenías instalado con versión anterior, desinstala y vuelve a instalar para aplicar mejoras.
-
-### Windows (PowerShell)
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install_autostart_windows.ps1
-```
-
-Desactivar:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\uninstall_autostart_windows.ps1
-```
-
-### Windows sin terminal (doble clic)
-
-- Instalar autoarranque: doble clic en `InstalarAutoarranqueWindows.bat`
-- Desinstalar autoarranque: doble clic en `DesinstalarAutoarranqueWindows.bat`
+No incluimos instaladores de autoarranque. Si quieres autoabrir al iniciar sesión, configúralo manualmente en tu sistema operativo (es más fiable).
 
 ## Controles 🎮
 
@@ -88,6 +58,30 @@ powershell -ExecutionPolicy Bypass -File .\scripts\uninstall_autostart_windows.p
 - `Pause`: pausa y preserva tiempo restante.
 - `Resume`: reanuda exacto desde restante.
 - `Exit`: cierra app.
+
+## Logo e icono 🧩
+
+Assets del logo:
+- `assets/logo/ojosaurio-logo.svg`
+- `assets/logo/ojosaurio-logo.png`
+- `assets/logo/ojosaurio-logo.ico`
+
+La ventana de la app ya usa este logo automáticamente cuando está disponible.
+
+### Cambiar icono en Windows (muy básico)
+
+1. Crea acceso directo de `OjoSaurio.bat` (clic derecho -> Crear acceso directo).
+2. Clic derecho en acceso directo -> `Propiedades`.
+3. `Cambiar icono...` -> elige `assets/logo/ojosaurio-logo.ico`.
+4. Usa ese acceso directo en Escritorio/Barra de tareas.
+
+### Cambiar icono en macOS (muy básico)
+
+1. Abre `assets/logo/ojosaurio-logo.png` con Preview.
+2. `Cmd + A`, luego `Cmd + C`.
+3. `Get Info` de `OjoSaurio.command`.
+4. Clic en iconito superior izquierdo y `Cmd + V`.
+5. Si quieres, arrastra `OjoSaurio.command` al Dock.
 
 ## Salud visual 🩺
 

@@ -23,11 +23,14 @@ class TwentyTwentyApp:
 
         root_dir = Path(__file__).resolve().parents[2]
         self.audio = AudioPlayer(asset_path=root_dir / "assets" / "beep_soft.wav")
+        self.logo_png_path = root_dir / "assets" / "logo" / "ojosaurio-logo.png"
+        self.logo_ico_path = root_dir / "assets" / "logo" / "ojosaurio-logo.ico"
 
         self.status_var = tk.StringVar(value="Ready")
         self.countdown_var = tk.StringVar(value="20:00")
         self.action_var = tk.StringVar(value="Start")
 
+        self._set_window_icon()
         self._build_layout()
         self._start_timer_now()
         self.root.after(200, self._bring_to_front)
@@ -61,6 +64,19 @@ class TwentyTwentyApp:
 
     def _start_timer_now(self) -> None:
         self.engine.start(time.monotonic())
+
+    def _set_window_icon(self) -> None:
+        if self.logo_png_path.exists():
+            try:
+                self._icon_photo = tk.PhotoImage(file=str(self.logo_png_path))
+                self.root.iconphoto(True, self._icon_photo)
+            except tk.TclError:
+                pass
+        if self.logo_ico_path.exists():
+            try:
+                self.root.iconbitmap(str(self.logo_ico_path))
+            except tk.TclError:
+                pass
 
     def _bring_to_front(self) -> None:
         try:
