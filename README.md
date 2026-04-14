@@ -30,6 +30,8 @@ O:
 
 - `OjoSaurio.bat`: doble clic, crea `.venv` si falta, instala app, abre temporizador.
 - `OjoSaurio.vbs`: doble clic sin ventana de consola (lanza `OjoSaurio.bat` oculto).
+- `OjoSaurioToy.bat`: modo toy Windows (`30s` + `20s`) para prueba rápida de pitidos.
+- `OjoSaurioToy.vbs`: igual que toy, sin consola visible.
 
 ## Toy test (macOS)
 
