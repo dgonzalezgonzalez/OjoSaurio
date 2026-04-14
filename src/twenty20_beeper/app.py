@@ -29,6 +29,8 @@ class TwentyTwentyApp:
         self.action_var = tk.StringVar(value="Start")
 
         self._build_layout()
+        self._start_timer_now()
+        self.root.after(200, self._bring_to_front)
         self._refresh_ui()
         self._schedule_tick()
 
@@ -56,6 +58,16 @@ class TwentyTwentyApp:
         else:
             self.engine.pause(now)
         self._refresh_ui()
+
+    def _start_timer_now(self) -> None:
+        self.engine.start(time.monotonic())
+
+    def _bring_to_front(self) -> None:
+        try:
+            self.root.lift()
+            self.root.focus_force()
+        except tk.TclError:
+            pass
 
     def _schedule_tick(self) -> None:
         self._tick_once()

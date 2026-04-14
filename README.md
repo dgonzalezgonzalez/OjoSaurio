@@ -83,7 +83,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\uninstall_autostart_windows.p
 
 ## Controles 🎮
 
-- `Start`: inicia ciclo 20 minutos.
+- Al abrir app, el ciclo arranca automáticamente.
+- `Start`: inicia ciclo si estaba detenido.
 - `Pause`: pausa y preserva tiempo restante.
 - `Resume`: reanuda exacto desde restante.
 - `Exit`: cierra app.
