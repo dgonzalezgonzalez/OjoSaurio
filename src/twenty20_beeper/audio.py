@@ -5,6 +5,7 @@ import platform
 import shutil
 import struct
 import subprocess
+import threading
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -75,3 +76,13 @@ class AudioPlayer:
 
     def play(self) -> None:
         self.backend(self.asset_path)
+
+    def play_nonblocking(self) -> None:
+        threading.Thread(target=self._play_safely, daemon=True).start()
+
+    def _play_safely(self) -> None:
+        try:
+            self.play()
+        except Exception:
+            # Audio failures should never break timer loop.
+            return

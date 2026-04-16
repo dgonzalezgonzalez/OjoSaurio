@@ -94,7 +94,7 @@ class TwentyTwentyApp:
         events = self.engine.tick(now)
         for event in events:
             if event.event_type in {EventType.BEEP_1, EventType.BEEP_2}:
-                self.audio.play()
+                self.audio.play_nonblocking()
         self._refresh_ui(now=now)
 
     def _refresh_ui(self, now: float | None = None) -> None:
